@@ -1,0 +1,13 @@
+GET http://localhost:8080/hello/haochuan?lastName=kuang
+Accept: text/plain
+
+###
+
+POST http://localhost:8080/hello
+Content-Type: application/json
+Accept: text/plain
+
+{
+  "firstName": "haochuan",
+  "lastName": "kuang"
+}
