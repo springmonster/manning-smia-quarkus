@@ -7,7 +7,7 @@ import static io.restassured.RestAssured.given;
 import static org.hamcrest.CoreMatchers.is;
 
 @QuarkusTest
-public class LicenseResourceTest {
+public class LicensingService5ResourceTest {
 
     @Test
     public void testHelloEndpoint() {

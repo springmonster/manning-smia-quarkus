@@ -11,5 +11,7 @@
     <modules>
         <module>chapter1/simple-application-1</module>
         <module>chapter3/licensing-service-3</module>
+        <module>chapter5/configserver5</module>
+        <module>chapter5/licensing-service-5</module>
     </modules>
 </project>

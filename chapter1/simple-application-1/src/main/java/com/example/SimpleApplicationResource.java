@@ -10,7 +10,7 @@ import javax.ws.rs.QueryParam;
 import javax.ws.rs.core.MediaType;
 
 @Path("/hello")
-public class ApplicationResource {
+public class SimpleApplicationResource {
 
     @GET
     @Produces(MediaType.TEXT_PLAIN)

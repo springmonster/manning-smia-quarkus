@@ -1,0 +1,29 @@
+spring:
+  main:
+    allow-bean-definition-overriding: true
+  application:
+    name: config-server
+  profiles:
+    active:
+      - native
+
+  cloud:
+    config:
+      server:
+        native:
+          search-locations: classpath:/config
+
+server:
+  port: 8888
+
+
+#Enable all Spring Boot Actuator endpoints.
+management:
+  endpoints:
+    web:
+      exposure:
+        include: "*"
+
+#  http://localhost:8888/licensing-service/default
+#  http://localhost:8888/licensing-service/dev
+#  http://localhost:8888/licensing-service/prod

@@ -17,7 +17,7 @@ import javax.ws.rs.core.MediaType;
 import javax.ws.rs.core.Response;
 
 @Path("/v1/organization/{organizationId}/license")
-public class LicenseResource {
+public class LicensingService3Resource {
 
     @Inject
     LicenseService licenseService;
