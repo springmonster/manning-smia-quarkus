@@ -16,8 +16,8 @@ VALUES (nextval('hibernate_sequence'), 'e839ee96-28de-4f67-bb79-870ca89743a0', '
         'illaryhs@gmail.com', '888888888');
 
 INSERT INTO license(id, licenseId, description, organizationId, productName, licenseType, comment)
-VALUES (nextval('hibernate_sequence'), 'f2a9c9d4-d2c0-44fa-97fe-724d77173c62', 'd898a142-de44-466c-8c88-9ceb2c2429d3',
-        'Software Product', 'Ostock', 'complete', 'I AM DEV');
+VALUES (nextval('hibernate_sequence'), 'f2a9c9d4-d2c0-44fa-97fe-724d77173c62', 'Software Product',
+        'd898a142-de44-466c-8c88-9ceb2c2429d3', 'Ostock', 'complete', 'I AM DEV');
 INSERT INTO license(id, licenseId, description, organizationId, productName, licenseType, comment)
-VALUES (nextval('hibernate_sequence'), '279709ff-e6d5-4a54-8b55-a5c37542025b', 'e839ee96-28de-4f67-bb79-870ca89743a0',
-        'Software Product', 'Ostock', 'complete', 'I AM DEV');
+VALUES (nextval('hibernate_sequence'), '279709ff-e6d5-4a54-8b55-a5c37542025b', 'Software Product',
+        'e839ee96-28de-4f67-bb79-870ca89743a0', 'Ostock', 'complete', 'I AM DEV');

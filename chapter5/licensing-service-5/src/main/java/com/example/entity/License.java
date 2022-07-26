@@ -1,6 +1,9 @@
 package com.example.entity;
 
+import io.quarkus.hibernate.reactive.panache.Panache;
 import io.quarkus.hibernate.reactive.panache.PanacheEntity;
+import io.quarkus.panache.common.Parameters;
+import io.smallrye.mutiny.Uni;
 import lombok.Getter;
 import lombok.Setter;
 import lombok.ToString;
