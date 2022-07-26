@@ -25,6 +25,10 @@ Content-Type: application/json
   "comment": "I AM HR"
 }
 
+### Test exception
+POST http://localhost:8080/v1/organization/e839ee96-28de-4f67-bb79-870ca89743a0/license
+Content-Type: application/json
+
 ###
 PUT http://localhost:8080/v1/organization/e839ee96-28de-4f67-bb79-870ca89743a0/license/279709ff-e6d5-4a54-8b55-a5c37542025b
 Content-Type: application/json
@@ -32,3 +36,12 @@ Content-Type: application/json
 ###
 DELETE http://localhost:8080/v1/organization/e839ee96-28de-4f67-bb79-870ca89743a0/license/d12a4b3e-c947-444a-a90e-1db4aaccc7a3
 Content-Type: application/json
+
+###
+POST http://localhost:8080/fruits
+Content-Type: application/json
+
+{
+  "id": 1,
+  "name": "Apple"
+}
