@@ -15,5 +15,7 @@
         <module>chapter5/licensing-service-5</module>
         <module>chapter6/licensing-service-6</module>
         <module>chapter6/organization-service-6</module>
+        <module>chapter6/licensing-service-6-1</module>
+        <module>chapter6/organization-service-6-1</module>
     </modules>
 </project>
