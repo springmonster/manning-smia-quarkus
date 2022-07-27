@@ -1,10 +1,11 @@
 package com.example;
 
+import io.smallrye.mutiny.Uni;
 import org.eclipse.microprofile.rest.client.inject.RegisterRestClient;
 
-import javax.ws.rs.GET;
-import javax.ws.rs.Produces;
+import javax.ws.rs.*;
 import javax.ws.rs.core.MediaType;
+import javax.ws.rs.core.Response;
 
 /**
  * The REST Client interface.
@@ -17,6 +18,8 @@ import javax.ws.rs.core.MediaType;
 public interface MyService {
 
     @GET
-    @Produces(MediaType.TEXT_PLAIN)
-    String get();
+    @Produces(MediaType.APPLICATION_JSON)
+    @Consumes(MediaType.APPLICATION_JSON)
+    @Path("v1/organization/{organizationId}")
+    Uni<Organization> getOrganization(@PathParam("organizationId") String organizationId);
 }
