@@ -1,4 +1,16 @@
-### get one
+### licensing service get one
 
-GET http://localhost:8080/v1/organization/d898a142-de44-466c-8c88-9ceb2c2429d3/license/f2a9c9d4-d2c0-44fa-97fe-724d77173c62
+GET http://localhost:8081/v1/organization/d898a142-de44-466c-8c88-9ceb2c2429d3/license/f2a9c9d4-d2c0-44fa-97fe-724d77173c62
+Content-Type: application/json
+
+### licensing service get all in organization
+GET http://localhost:8081/v1/organization/d898a142-de44-466c-8c88-9ceb2c2429d3/license
+Content-Type: application/json
+
+### licensing service get all
+GET http://localhost:8081/v1/organization
+Content-Type: application/json
+
+### licensing service get organization
+GET http://localhost:8081/v1/organization/d898a142-de44-466c-8c88-9ceb2c2429d3
 Content-Type: application/json

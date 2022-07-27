@@ -20,6 +20,6 @@ public interface MyService {
     @GET
     @Produces(MediaType.APPLICATION_JSON)
     @Consumes(MediaType.APPLICATION_JSON)
-    @Path("v1/organization/{organizationId}")
-    Uni<Organization> getOrganization(@PathParam("organizationId") String organizationId);
+    @Path("v1/organization/{organizationId}/text")
+    String getOrganization(@PathParam("organizationId") String organizationId);
 }

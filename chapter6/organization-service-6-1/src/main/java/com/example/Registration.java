@@ -18,12 +18,11 @@ public class Registration {
     @ConfigProperty(name = "consul.port")
     int port;
 
-    @ConfigProperty(name = "organization-service-port-a", defaultValue = "9000")
+    @ConfigProperty(name = "organization-service-port-a", defaultValue = "9002")
     int portA;
 
-
-    @ConfigProperty(name = "organization-service-port-b", defaultValue = "9001")
-    int portB;
+//    @ConfigProperty(name = "organization-service-port-b", defaultValue = "9001")
+//    int portB;
 
     /**
      * Register our two services in Consul.
@@ -36,7 +35,7 @@ public class Registration {
         client.registerServiceAndAwait(
                 new ServiceOptions().setPort(portA).setAddress("localhost").setName("organization-service").setId("organization-service-a"));
 
-        client.registerServiceAndAwait(
-                new ServiceOptions().setPort(portB).setAddress("localhost").setName("organization-service").setId("organization-service-b"));
+//        client.registerServiceAndAwait(
+//                new ServiceOptions().setPort(portB).setAddress("localhost").setName("organization-service").setId("organization-service-b"));
     }
 }

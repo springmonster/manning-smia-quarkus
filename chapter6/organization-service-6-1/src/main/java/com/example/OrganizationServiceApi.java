@@ -29,6 +29,12 @@ public class OrganizationServiceApi {
     }
 
     @GET
+    @Path("{organizationId}/text")
+    public String getOrganizationText(@PathParam("organizationId") String organizationId) {
+        return organizationId;
+    }
+
+    @GET
     public Uni<Response> getOrganizations() {
         return organizationService.getOrganizations();
     }

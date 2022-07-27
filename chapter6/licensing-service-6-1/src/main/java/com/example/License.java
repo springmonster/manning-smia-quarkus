@@ -1,28 +1,20 @@
 package com.example;
 
-import com.fasterxml.jackson.annotation.JsonInclude;
 import io.quarkus.hibernate.reactive.panache.PanacheEntityBase;
 
-import javax.persistence.Column;
+import javax.persistence.Entity;
 import javax.persistence.Id;
-import javax.persistence.Table;
 import javax.persistence.Transient;
 
-@Table(name = "licenses")
-@JsonInclude(JsonInclude.Include.NON_NULL)
+@Entity
 public class License extends PanacheEntityBase {
 
     @Id
-    @Column(name = "license_id", nullable = false)
     private String licenseId;
-    private String description;
-    @Column(name = "organization_id", nullable = false)
     private String organizationId;
-    @Column(name = "product_name", nullable = false)
+    private String description;
     private String productName;
-    @Column(name = "license_type", nullable = false)
     private String licenseType;
-    @Column(name = "comment")
     private String comment;
 
     @Transient
@@ -114,8 +106,19 @@ public class License extends PanacheEntityBase {
         this.contactEmail = contactEmail;
     }
 
-    public License withComment(String comment) {
-        this.setComment(comment);
-        return this;
+    @Override
+    public String toString() {
+        return "License{" +
+                "licenseId='" + licenseId + '\'' +
+                ", organizationId='" + organizationId + '\'' +
+                ", description='" + description + '\'' +
+                ", productName='" + productName + '\'' +
+                ", licenseType='" + licenseType + '\'' +
+                ", comment='" + comment + '\'' +
+                ", organizationName='" + organizationName + '\'' +
+                ", contactName='" + contactName + '\'' +
+                ", contactPhone='" + contactPhone + '\'' +
+                ", contactEmail='" + contactEmail + '\'' +
+                '}';
     }
 }

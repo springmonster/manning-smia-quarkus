@@ -1,16 +1,16 @@
 ### get one
 
-GET http://localhost:9000/v1/organization/e6a625cc-718b-48c2-ac76-1dfdff9a531e
+GET http://localhost:9002/v1/organization/e6a625cc-718b-48c2-ac76-1dfdff9a531e
 Content-Type: application/json
 
 ### get all
 
-GET http://localhost:9000/v1/organization
+GET http://localhost:9002/v1/organization
 Content-Type: application/json
 
 ### create one
 
-POST http://localhost:9000/v1/organization
+POST http://localhost:9002/v1/organization
 Content-Type: application/json
 
 {
@@ -22,11 +22,10 @@ Content-Type: application/json
 
 ### update one
 
-PUT http://localhost:9000/v1/organization/e839ee96-28de-4f67-bb79-870ca89743a0
+PUT http://localhost:9002/v1/organization/e839ee96-28de-4f67-bb79-870ca89743a0
 Content-Type: application/json
 
 ### delete one
 
-DELETE http://localhost:9000/v1/organization/e839ee96-28de-4f67-bb79-870ca89743a0
+DELETE http://localhost:9002/v1/organization/e839ee96-28de-4f67-bb79-870ca89743a0
 Content-Type: application/json
-
