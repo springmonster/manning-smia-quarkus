@@ -11,10 +11,9 @@ import java.util.UUID;
 @ApplicationScoped
 public class OrganizationService {
 
-    public Uni<Organization> getOrganization(String organizationId) {
-        return Panache.withTransaction(() ->
-                Organization.<Organization>find("SELECT id, name, contactName, contactEmail, contactPhone FROM Organization WHERE id = :organizationId",
-                        Parameters.with("organizationId", organizationId)).firstResult());
+    public Uni<Response> getOrganization(String organizationId) {
+        return Panache.withTransaction(() -> Organization.findById(organizationId))
+                .onItem().transform(organization -> Response.ok(organization).build());
     }
 
     public Uni<Response> getOrganizations() {
