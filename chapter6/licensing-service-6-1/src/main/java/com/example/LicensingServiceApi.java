@@ -6,11 +6,7 @@ import io.smallrye.mutiny.Uni;
 import org.eclipse.microprofile.rest.client.inject.RestClient;
 
 import javax.inject.Inject;
-import javax.ws.rs.Consumes;
-import javax.ws.rs.GET;
-import javax.ws.rs.Path;
-import javax.ws.rs.PathParam;
-import javax.ws.rs.Produces;
+import javax.ws.rs.*;
 import javax.ws.rs.core.MediaType;
 import java.util.List;
 
@@ -47,9 +43,15 @@ public class LicensingServiceApi {
                 License.<License>listAll());
     }
 
+//    @GET
+//    @Path("{organizationId}")
+//    public String getOrganizationText(@PathParam("organizationId") String organizationId) {
+//        return myService.getOrganizationText(organizationId);
+//    }
+
     @GET
     @Path("{organizationId}")
-    public String getOrganization(@PathParam("organizationId") String organizationId) {
+    public Uni<Organization> getOrganization(@PathParam("organizationId") String organizationId) {
         return myService.getOrganization(organizationId);
     }
 }
