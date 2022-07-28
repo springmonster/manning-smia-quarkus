@@ -1,12 +1,16 @@
 package com.example;
 
 import io.quarkus.hibernate.reactive.panache.PanacheEntityBase;
+import io.quarkus.panache.common.Parameters;
+import io.smallrye.mutiny.Uni;
 
-import javax.persistence.Entity;
-import javax.persistence.Id;
-import javax.persistence.Transient;
+import javax.persistence.*;
 
 @Entity
+@NamedQueries({
+        @NamedQuery(name = "License.getByOrganizationIdAndLicenseId",
+                query = "from License where organizationId = :organizationId and licenseId = :licenseId")
+})
 public class License extends PanacheEntityBase {
 
     @Id
@@ -120,5 +124,9 @@ public class License extends PanacheEntityBase {
                 ", contactPhone='" + contactPhone + '\'' +
                 ", contactEmail='" + contactEmail + '\'' +
                 '}';
+    }
+
+    public static Uni<License> getByOrganizationIdAndLicenseId(String organizationId, String licenseId) {
+        return find("#License.getByOrganizationIdAndLicenseId", Parameters.with("organizationId", organizationId).and("licenseId", licenseId)).firstResult();
     }
 }

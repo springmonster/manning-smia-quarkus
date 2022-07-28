@@ -52,6 +52,6 @@ public class LicensingServiceApi {
     @GET
     @Path("{organizationId}")
     public Uni<Organization> getOrganization(@PathParam("organizationId") String organizationId) {
-        return myService.getOrganization(organizationId);
+        return licensingService.getOrganization(organizationId);
     }
 }
