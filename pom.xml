@@ -17,5 +17,6 @@
         <module>chapter6/organization-service-6</module>
         <module>chapter6/licensing-service-6-1</module>
         <module>chapter6/organization-service-6-1</module>
+        <module>chapter7/fault-tolerance</module>
     </modules>
 </project>
