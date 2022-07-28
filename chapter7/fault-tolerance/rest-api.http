@@ -1,0 +1,16 @@
+### get all coffee
+
+GET http://localhost:8081/coffee
+
+### get one coffee
+
+GET http://localhost:8081/coffee/1
+
+### get one availability
+
+GET http://localhost:8081/coffee/1/availability
+
+### get one recommendations
+
+GET http://localhost:8081/coffee/1/recommendations
+
